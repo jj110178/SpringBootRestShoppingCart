@@ -1,4 +1,4 @@
-###Coding Exercise
+### Coding Exercise
 
  
  Problem : Consider a grocery store where items have prices per unit but also volume prices. For example, doughnuts may be $1.25 each or 3 for $3 dollars.
@@ -35,10 +35,10 @@
  ## Running Application
  `` $ mvn spring-boot:run ``
  
- ###Sample Request
+ ### Sample Request
  ``$ curl -i http://localhost:8080/api/v1/shoppingcart/AAA ``
  
- ###Sample Response
+ ### Sample Response
  
  ```HTTP/1.1 200 
  Content-Type: application/json;charset=UTF-8 
@@ -47,7 +47,7 @@
    
  {"plist":[{"pCode":"A","pPrice":1.25},{"pCode":"A","pPrice":1.25},{"pCode":"A","pPrice":1.25}],"totalPrice":"$3.00"}
    ```
-###Testing Scenario 1
+### Testing Scenario 1
  ``$ curl -i http://localhost:8080/api/v1/shoppingcart/ABCDABA ``
  
 ```
@@ -59,7 +59,7 @@ Date: Mon, 30 Jul 2018 16:44:50 GMT
 {"plist":[{"pCode":"A","pPrice":1.25},{"pCode":"B","pPrice":4.25},{"pCode":"C","pPrice":1.0},{"pCode":"D","pPrice":0.75},{"pCode":"A","pPrice":1.25},{"pCode":"B","pPrice":4.25},{"pCode":"A","pPrice":1.25}],"totalPrice":"$13.25"}
 ```  
 
-###Testing Scenario 2
+### Testing Scenario 2
  ``$ curl -i http://localhost:8080/api/v1/shoppingcart/CCCCCCC ``
  
 ```
@@ -72,7 +72,7 @@ Date: Mon, 30 Jul 2018 16:46:12 GMT
 ```  
 
 
-###Testing Scenario 3
+### Testing Scenario 3
  ``$ curl -i http://localhost:8080/api/v1/shoppingcart/ABCD ``
  
 ```
@@ -83,4 +83,3 @@ Date: Mon, 30 Jul 2018 16:46:30 GMT
 
 {"plist":[{"pCode":"A","pPrice":1.25},{"pCode":"B","pPrice":4.25},{"pCode":"C","pPrice":1.0},{"pCode":"D","pPrice":0.75}],"totalPrice":"$7.25"}
 ```  
-# SpringBootRestShoppingCart
